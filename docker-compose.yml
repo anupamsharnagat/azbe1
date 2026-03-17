@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: rag_backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./rag_backend/.env
+
+  frontend:
+    build:
+      context: ./frontend-angular
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

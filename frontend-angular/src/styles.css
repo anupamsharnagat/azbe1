@@ -1,0 +1,29 @@
+:root {
+  --bg-sidebar: #171717;
+  --bg-main: #212121;
+  --bg-bubble-ai: #2f2f2f;
+  --bg-bubble-user: #303030;
+  --text-main: #ececec;
+  --text-muted: #b4b4b4;
+  --accent-orange: #ff9000;
+  --accent-blue: #2f81f7;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --sidebar-width: 260px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+app-root {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

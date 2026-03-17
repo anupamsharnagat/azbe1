@@ -1,0 +1,14 @@
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+local_faiss_index
+temp_uploads
+.git
+node_modules
+dist
+.env
+**/node_modules
+**/dist
+**/.venv
+**/__pycache__

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    image: anres4registry.azurecr.io/rag-backend:latest
+    restart: always
+
+  frontend:
+    image: anres4registry.azurecr.io/rag-frontend:latest
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

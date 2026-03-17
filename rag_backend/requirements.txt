@@ -1,0 +1,15 @@
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic-settings==2.3.4
+langchain==0.2.14
+langchain-core==0.2.35
+langchain-openai==0.1.22
+langchain-community==0.2.12
+pdfplumber==0.11.2
+pymupdf==1.25.3
+faiss-cpu==1.8.0.post1
+azure-identity==1.17.1
+azure-keyvault-secrets==4.8.0
+pytest==8.2.2
+httpx==0.27.0
+python-multipart==0.0.9
