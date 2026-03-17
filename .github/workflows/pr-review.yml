@@ -1,0 +1,25 @@
+name: AI PR Reviewer (External)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    name: Trigger Local AI Review
+    runs-on: self-hosted
+    steps:
+      - name: Run AI Agent
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 1. Change directory to where your PR Review Agent is installed
+          cd "E:\rnd\antigravity\prreviewsystem"
+          
+          # 2. Trigger the analysis CLI using the direct path to the virtual environment
+          $env:PYTHONPATH="."
+          .\.venv\Scripts\python.exe src/cli.py --url ${{ github.event.pull_request.html_url }}
